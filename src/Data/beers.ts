@@ -1,6 +1,6 @@
-import { Beer } from "./types";
+import { BeerTypes } from "../Types/beerTypes";
 
-const beers: Beer[] = [
+const beers: BeerTypes[] = [
   {
     id: 1,
     name: "Buzz",

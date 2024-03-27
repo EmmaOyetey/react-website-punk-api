@@ -1,21 +1,26 @@
 //import "./BeerCard.scss"
-import { beerTypes } from "../../Types/Beertypes";
+//import beerTypes from "../../Types/BeerTypes";
 
 type BeerCardProps = {
-  beer: beerTypes[];
+  name: string,
+  imageUrl: string,
+  description: string
 };
 
-const BeerCard = ({beer}) : BeerCardProps) => {
 
-if (!BeerCard) {return "beer not found"};
+const BeerCard = ({name, imageUrl, description} : BeerCardProps) => {
 
-return (
-    <div className = "beer-card">
-        <p className = "beer-card__name">{BeerCard.name}</p>
-        <img 
-        src={"BeerCard.image-url"} alt="picture of beer" />
-        <p className = "beer-card__abrv-info" >{BeerCard.description</p>
-    </div>
-);
+    return (
+        <div className = "beer-card">
+            <img className = "beer-card__image"
+            key ={name}
+            src={imageUrl} 
+            alt={name} />
+            <p className = "beer-card__name">{name}</p>
+            <p className = "beer-card__abrv-info" >{description}description</p>
+        </div>
+    );
 
-}
+};
+
+export default BeerCard;
