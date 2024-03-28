@@ -16,8 +16,8 @@ const App = () => {
     <div className="app">
       <section className = "header">
           <h1 className="header__name">
-              Beer Cricket : 
-              <span style={{ fontSize: '1.2em' }}>All about the hops</span>
+              Beer Cricket :  
+              <span style={{ fontSize: '2rem' }}> All about the hops</span>
           </h1>
           <img className = "header__cricket" src="./assets/cricket.png" alt="" />
       </section>
