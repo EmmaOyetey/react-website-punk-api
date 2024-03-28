@@ -1,0 +1,25 @@
+.search-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 rem;
+  margin-top: 4rem;
+}
+.search-box .search-box__label {
+  font-size: 1.3rem;
+}
+.search-box .search-box__input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.25rem 0;
+  padding: 0.3rem;
+  font-size: 1rem;
+  border: 0.313rem grey solid;
+  border-radius: 1rem;
+  color: black;
+}
+.search-box .search-box__input:focus {
+  border: 0.313rem whitesmoke solid;
+  outline: none;
+}/*# sourceMappingURL=SearchBox.css.map */

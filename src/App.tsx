@@ -3,6 +3,7 @@
 import "./App.scss";
 import beers from "./Data/beers";
 import BeerGallery from "./Components/BeerGallery/BeerGallery";
+import Nav from "./Components/Nav/Nav";
 
 //import { useState } from 'react';
 
@@ -13,13 +14,18 @@ const App = () => {
 
   return (
     <div className="app">
-
-      <section>
-        <nav>This is where my nav with go it will have filters 123</nav>
+      <section className = "header">
+          <h1 className = "header__name">Beer Cricket : All about the hops</h1>
+          <img className = "header__cricket" src="./assets/cricket.png" alt="" />
       </section>
-       <section className = "BeerGallery">
-          <BeerGallery beers = {beers} heading = "Explore Beers!"/>
-       </section>
+      <section className = "main">
+          <section className = "main__navigation">
+            <Nav />
+          </section>
+          <section className = "beerGallery">
+            <BeerGallery beers = {beers} heading = "Explore Beers!"/>
+          </section>
+      </section>
     </div>
   );
 };

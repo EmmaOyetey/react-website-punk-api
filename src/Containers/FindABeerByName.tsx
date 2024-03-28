@@ -7,7 +7,7 @@ type FindABeerByNameProps = {
   beers: BeerTypes[];
 };
 
-const FindABearByName= ({beers}: FindABeerByNameProps) => {
+const FindABeerByName= ({beers}: FindABeerByNameProps) => {
   const [searchTerm, setSearchTerm] = useState<string>("");
 
   const handleInput = (event: FormEvent<HTMLInputElement>) => {
@@ -31,4 +31,4 @@ const FindABearByName= ({beers}: FindABeerByNameProps) => {
   );
 };
 
-export default FindABearByName;
+export default FindABeerByName;
