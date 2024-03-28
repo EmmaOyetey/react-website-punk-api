@@ -1,5 +1,6 @@
 import "./Nav.scss"
 import FindABeerByName from "../../Containers/FindABeerByName";
+import FilteredBeers from "../../Containers/FilterBeerByKey";
 import beers from "../../Data/beers";
 //import { BeerTypes } from "../../Types/beerTypes";
 //import { useState } from "react";
@@ -12,6 +13,7 @@ const Nav = () => {
         <p className = "info">Looking for a new one to enjoy?</p>
         <p className = "info">You are in the Right Place</p>
         <FindABeerByName beers={beers}/>
+        <FilteredBeers beers={beers}/>
     </section>
 
   );}
