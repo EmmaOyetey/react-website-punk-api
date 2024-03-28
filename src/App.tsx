@@ -13,11 +13,13 @@ const App = () => {
 
   return (
     <div className="app">
-       
+
+      <section>
+        <nav>This is where my nav with go it will have filters 123</nav>
+      </section>
+       <section className = "BeerGallery">
           <BeerGallery beers = {beers} heading = "Explore Beers!"/>
-       
-
-
+       </section>
     </div>
   );
 };

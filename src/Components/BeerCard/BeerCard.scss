@@ -21,15 +21,18 @@
 //       height: 40rem;
 // }  
 
-.beer-card {
+.beer-card--mainPageGallery {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 15rem; // Set the width of the container as needed
+  width: 15rem;
+  height: 19rem; // Set the width of the container as needed
   padding: 1rem;
   box-shadow: 0 -0.325rem 0.3rem rgba(whitesmoke, 0.25);
-  border: 0.5rem solid rgba(0, 0, 0, 0.5);
+  border: 0.3rem solid rgba(0, 0, 0, 0.5);
   border-radius: 2%;
+  background-color:rgb(46, 46, 46);
+  margin: 0.8rem;
 
       .beer-card__content {
        width: 100%; // Make all sections take up full width
@@ -48,13 +51,14 @@
         .beer-card__name {
           margin-top: 0.1rem; // Add margin between sections
           margin-bottom: 0;
-          font-size: 2rem;
+          font-size: 1.6rem;
           font-weight: 500;
           }
 
         .beer-card__abrv-info {
           margin-top: 0.2rem;
-          font-size: 1.3rem;
+          margin-bottom: 0;
+          font-size: 1.2rem;
           font-weight: 500;
         }
       }
