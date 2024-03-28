@@ -9,9 +9,9 @@ const Nav = () => {
 
   return (
     <section className = "find-a-beer" >
-        <p className = "info">Need to know more about your favourite Beer? </p>
-        <p className = "info">Looking for a new one to enjoy?</p>
-        <p className = "info">You are in the Right Place</p>
+        <p className = "find-a-beer__info1">Need to know more about your favourite Beer? </p>
+        <p className = "find-a-beer__info2">Looking for a new one to enjoy?</p>
+        <p className = "find-a-beer__info3">You're in the Right Place</p>
         <FindABeerByName beers={beers}/>
         <FilteredBeers beers={beers}/>
     </section>

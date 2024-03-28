@@ -1,0 +1,21 @@
+    .filter-box__content {
+    padding-top: 1.5rem;
+    
+    .filter-box__label {
+      font-size: 1.3rem;
+      margin-bottom: 8rem;
+      padding-bottom: 3rem;
+    }
+
+    }
+
+    .filter-box__checkboxItems {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem; 
+
+    input[type="checkbox"] {
+      margin-right: 0.9rem; 
+    }
+
+}

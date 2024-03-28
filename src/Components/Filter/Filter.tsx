@@ -1,5 +1,5 @@
 import { ChangeEventHandler } from "react";
-//import "./DropDownBox.scss";
+import "./Filter.scss";
 
 type FilterProps = {
   label: string;
@@ -12,12 +12,12 @@ const Filter = ({ label, selectedItems, items, handleInputChange }: FilterProps)
   const capitalizedLabel = label[0].toUpperCase() + label.slice(1);
 
   return (
-    <div className="search-box">
-      <div className="search-box__byRole">
-        <label className="search-box__label">{capitalizedLabel}</label>
-        <div className="search-box__checkboxes">
+    <div className="filter-box">
+      <div className="filter-box__content">
+        <label className="filter-box__label">{capitalizedLabel}</label>
+        <div className="filter-box__checkboxes">
           {items.map((item: string, index: number) => (
-            <div key={index} className="search-box__checkbox">
+            <div key={index} className="filter-box__checkboxItems">
               <input
                 type="checkbox"
                 id={`${label}-${index}`}

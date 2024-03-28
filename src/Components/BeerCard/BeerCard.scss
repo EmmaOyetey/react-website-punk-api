@@ -1,56 +1,33 @@
-// .beer-card {
-//     position: relative;
-//     border-radius: 1rem;
-//     overflow: hidden;
-//     box-shadow: 0 0.625rem 1.25rem rgba(black, 0.25);
-// }  
-//     .beer-card__image {
-//       width: 100%;
-//       height:auto;
-//     }
-
-// .beer-card {
-//     padding: 0.625rem 0 1.25rem 3.125rem;
-//       display: flex;
-//       flex-wrap: wrap;
-//       flex-direction: column;
-//       justify-content: center;
-//       align-items: center;
-//       overflow-x: auto;
-//       width: 20rem;
-//       height: 40rem;
-// }  
-
 .beer-card--mainPageGallery {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 12rem;
-  height: 15.5rem; // Set the width of the container as needed
+  height: 15.5rem; 
   padding: 1rem;
   box-shadow: 0 -0.325rem 0.3rem rgba(whitesmoke, 0.25);
   border: 0.3rem solid rgba(0, 0, 0, 0.5);
-  border-radius: 2%;
-  background-color:rgb(46, 46, 46);
+  border-radius: 5%;
+  background-color:rgb(244, 239, 239);
   margin: 0.8rem;
 
       .beer-card__content {
-       width: 100%; // Make all sections take up full width
-      // Add padding as needed
+       width: 100%; 
     
         .beer-card__image {
-        width: 100%; // Make the image fill its container
-        height: auto; // Maintain aspect ratio
-        object-fit: contain; // Ensure the image covers the container
-        max-height: 7rem; // Set a maximum height for consistency    
+        width: 100%; 
+        height: auto; 
+        object-fit: contain; 
+        max-height: 7rem;  
         }
     
         .beer-card__name {
-          margin-top: 0.1rem; // Add margin between sections
+          margin-top: 0.1rem; 
           margin-bottom: 0;
           font-size: 1.4rem;
           font-weight: 500;
           text-align: center;
+          color: #333;
           }
 
         .beer-card__abrv-info {
@@ -58,18 +35,13 @@
           margin-bottom: 0;
           font-size: 1rem;
           font-weight: 500;
-          text-align:center
+          text-align:center;
+          color: #333;
         }
       }
 }
   
-      // .beer-card__image {
-      //   width: auto;
-      //   height:40rem;
-      //   border-radius: 1rem;
-      //   box-shadow: 0 0.625rem 1.25rem rgb(45 52 54 / 25%);
-      //   margin: 0.625rem 1.25rem 0.625rem 0;
-      // }
+
     
   
     // .beer-card {

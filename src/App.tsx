@@ -15,7 +15,10 @@ const App = () => {
   return (
     <div className="app">
       <section className = "header">
-          <h1 className = "header__name">Beer Cricket : All about the hops</h1>
+          <h1 className="header__name">
+              Beer Cricket : 
+              <span style={{ fontSize: '1.2em' }}>All about the hops</span>
+          </h1>
           <img className = "header__cricket" src="./assets/cricket.png" alt="" />
       </section>
       <section className = "main">
@@ -23,7 +26,7 @@ const App = () => {
             <Nav />
           </section>
           <section className = "beerGallery">
-            <BeerGallery beers = {beers} heading = "Explore Beers!"/>
+            <BeerGallery beers = {beers} heading = ""/>
           </section>
       </section>
     </div>

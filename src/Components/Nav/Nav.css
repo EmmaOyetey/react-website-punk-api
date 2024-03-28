@@ -1,11 +1,17 @@
 .find-a-beer {
   max-width: 25rem;
-  height: 90%;
+  height: 100%;
   font-size: 1.25rem;
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
   padding-right: 1.75rem;
   padding-left: 1.75rem;
   background-color: rgb(36, 36, 36);
   border-radius: 5px;
+}
+.find-a-beer .find-a-beer__info1, .find-a-beer .find-a-beer__info2, .find-a-beer .find-a-beer__info3 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.find-a-beer .find-a-beer__info1 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=Nav.css.map */
