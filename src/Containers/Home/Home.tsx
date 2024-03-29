@@ -1,16 +1,11 @@
-//import { useState } from 'react'
-
-import "./App.scss";
-import beers from "./Data/beers";
-import BeerGallery from "./Components/BeerGallery/BeerGallery";
-import Nav from "./Components/Nav/Nav";
+import "./Home.scss";
+import beers from "../../Data/beers";
+import BeerGallery from "../../Components/BeerGallery/BeerGallery";
+import Nav from "../../Components/Nav/Nav";
 
 //import { useState } from 'react';
 
-//const [count, setCount] = useState(0) removed this from the boiler plate
-//const getGreetingMessage = (hour: number): string => {
-
-const App = () => {
+const Home = () => {
 
   return (
     <div className="app">
@@ -33,5 +28,4 @@ const App = () => {
   );
 };
 
-export default App;
-
+export default Home;
