@@ -6,6 +6,7 @@ import {BeerTypes} from "./Types/beerTypes";
 import BeerGallery from "./Components/BeerGallery/BeerGallery";
 import Nav from "./Components/Nav/Nav";
 import { useState } from "react";
+import cricketTest from "./Assets/cricketTest.png";
 
 const App = () => {
   const [filteredBeers, setFilteredBeers] = useState(beersData);
@@ -25,7 +26,7 @@ const App = () => {
           Beer Cricket :
           <span style={{ fontSize: "2rem" }}> All about the hops</span>
         </h1>
-        <img className="header__cricket" src="./assets/cricket1.png" alt="" />
+        <img className="header__cricket" src={cricketTest} alt="cricket image" />  
       </section>
       <section className="main">
         <section className="main__navigation">
