@@ -9,13 +9,13 @@ type BeerGalleryProps = {
 
 const BeerGallery = ({beers, heading} : BeerGalleryProps) => {
 
-const cleansedBeers = beers.filter(beer => beer.image_url);
+const filteredBeers = beers.filter(beer => beer.image_url);
 
         return(
             <div className = "beer-gallery">
                 <h2 className = "beer-gallery__heading">{heading}</h2>
                 <div className = "beer-gallery__content">
-                {cleansedBeers.map(beer => (
+                {filteredBeers.map(beer => (
                     <BeerCard 
                         name = {beer.name} 
                         imageUrl = {beer.image_url}
