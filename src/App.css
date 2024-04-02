@@ -1,1 +1,34 @@
-/*# sourceMappingURL=App.css.map */
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  position: sticky;
+  background-color: #333;
+  top: 0;
+  width: 100%;
+  height: 4.2rem;
+}
+.header .header__name {
+  margin: 0;
+  font-size: 2.7rem;
+  text-align: center;
+  position: sticky;
+  width: 100%;
+}
+.header .header__cricket {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+.main .main__navigation {
+  margin-top: 2rem;
+}/*# sourceMappingURL=App.css.map */
