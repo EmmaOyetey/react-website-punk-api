@@ -2,17 +2,22 @@ import "./Nav.scss"
 import FindABeerByName from "../../Containers/FindABeerByName";
 import FilteredBeers from "../../Containers/FilterBeerByKey";
 import beers from "../../Data/beers";
-//import { BeerTypes } from "../../Types/beerTypes";
+import { BeerTypes } from "../../Types/beerTypes";
 //import { useState } from "react";
 
-const Nav = () => {
+type NavProps = {
+  handleFilter:(filteredData:BeerTypes[]) => void;
+  allBeers:BeerTypes[];
+};
+
+const Nav = ({handleFilter, allBeers}: NavProps) => {
 
   return (
     <section className = "find-a-beer" >
         <p className = "find-a-beer__info1">Need to know more about your favourite Beer? </p>
         <p className = "find-a-beer__info2">Looking for a new one to enjoy?</p>
         <p className = "find-a-beer__info3">You're in the Right Place</p>
-        <FindABeerByName beers={beers}/>
+        <FindABeerByName handleFilter={handleFilter} allBeers={allBeers}/>
         <FilteredBeers beers={beers}/>
     </section>
 
