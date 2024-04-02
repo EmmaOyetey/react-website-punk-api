@@ -18,7 +18,7 @@ const filteredBeers = beers.filter(beer => beer.image_url);
                 {filteredBeers.map(beer => (
                     <BeerCard 
                         name = {beer.name} 
-                        imageUrl = {beer.image_url}
+                        imageUrl = {String(beer.image_url)}
                         description = {beer.description}
                         styleVariant = "mainPageGallery"
                     />
