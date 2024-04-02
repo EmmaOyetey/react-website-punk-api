@@ -4,11 +4,11 @@ import {BeerTypes} from "../Types/beerTypes";
 
 
 type FindABeerByNameProps = {
-  handleFilter: (filtereData:BeerTypes[]) => void;
+  handleFilterByName: (filtereData:BeerTypes[]) => void;
   allBeers: BeerTypes[];
 };
 
-const FindABeerByName= ({handleFilter, allBeers}: FindABeerByNameProps) => {
+const FindABeerByName= ({handleFilterByName, allBeers}: FindABeerByNameProps) => {
   const [searchTerm, setSearchTerm] = useState<string>("");
 
   const handleInput = (event: FormEvent<HTMLInputElement>) => {
@@ -16,12 +16,12 @@ const FindABeerByName= ({handleFilter, allBeers}: FindABeerByNameProps) => {
     setSearchTerm(cleanInput);
 
     if(cleanInput.trim() === "") {
-      handleFilter(allBeers);
+      handleFilterByName(allBeers);
     } else {
       const filteredData = allBeers.filter((beers =>
     beers.name.toLowerCase().includes(cleanInput))
     );
-    handleFilter(filteredData);
+    handleFilterByName(filteredData);
     }
 };
 

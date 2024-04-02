@@ -1,18 +1,18 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useState, useEffect } from "react";
 import Filter from "../Components/Filter/Filter";
 import {BeerTypes} from "../Types/beerTypes";
-import BeerGallery from "../Components/BeerGallery/BeerGallery";
 
 type FilteredBeersProps = {
-  beers: BeerTypes[];
+  handleFilterBeersByKey : (filteredData: BeerTypes[]) => void;
+  allBeers: BeerTypes[];
 };
 
-const FilteredBeers = ({ beers }: FilteredBeersProps) => {
-  const [searchTerm, setSearchTerm] = useState<string[]>([]);
+const FilteredBeers = ({handleFilterBeersByKey ,allBeers}: FilteredBeersProps) => {
+  const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const selectedValue = event.target.value;
-    setSearchTerm(prevState => {
+    setSelectedFilters(prevState => {
       if (prevState.includes(selectedValue)) {
         return prevState.filter(item => item !== selectedValue);
       } else {
@@ -21,48 +21,41 @@ const FilteredBeers = ({ beers }: FilteredBeersProps) => {
     });
   };
 
-  const classicBeers = beers.filter(beer => {
-    const year = parseInt(beer.first_brewed.split("/")[1]); // Extract and parse the year part
-    return year < 2010; // Compare the parsed year with 2010
-  });
-  const highAlcoholBeers = beers.filter(beers => beers.abv > 6);
-  const highAcidityBeers = beers.filter(beers => beers.ph < 4);
+  useEffect(() => {
+    applyFilters();
+  }, [selectedFilters]);
 
-  const items = [
-    { label: "Classic Beers", value: classicBeers },
-    { label: "High Alcohol Beers", value: highAlcoholBeers },
-    { label: "High Acidity Beers", value: highAcidityBeers }
-  ];
+  const applyFilters = () =>{
+    let filteredData: BeerTypes [] = [...allBeers];
 
-  return (
-    <>
-      <Filter
-        label="Find a Beer"
-        selectedItems={searchTerm}
-        items={items.map(item => item.label)}
-        handleInputChange={handleInputChange}
-      />
-      {searchTerm.length > 0 && (
-      <BeerGallery
-        beers={beers.filter(beer => {
-          return searchTerm.some(term => {
-            if (term === "Classic Beers") {
-              return classicBeers.includes(beer);
-            }
-            if (term === "High Alcohol Beers") {
-              return highAlcoholBeers.includes(beer);
-            }
-            if (term === "High Acidity Beers") {
-              return highAcidityBeers.includes(beer);
-            }
-            return false;
-          });
-        })}
-        heading="Beers Matching your Search"
-      />
-    )}
-    </>
-  );
-};
+    selectedFilters.forEach(filter => {
+      if (filter === "Classic Beers") {
+        filteredData = filteredData.filter(beer => {
+          const year = parseInt(beer.first_brewed.split("/")[1]);
+          return year < 2010;
+        });
+      } else if (filter === "High Alcohol Beers") {
+        filteredData = filteredData.filter(beer => beer.abv > 6);
+      } else if (filter === "High Acidity Beers") {
+        filteredData = filteredData.filter(beer => beer.ph < 4);
+      }
+    });
 
-export default FilteredBeers;
+    handleFilterBeersByKey(filteredData);
+  };
+
+    return (
+      <>
+        <Filter
+          label="Find a Beer"
+          items={["Classic Beers", "High Alcohol Beers", "High Acidity Beers"]}
+          selectedItems={selectedFilters}
+          handleInputChange={handleInputChange}
+        />
+      </>
+    );
+  };
+  
+  export default FilteredBeers;
+
+

@@ -10,7 +10,11 @@ import { useState } from "react";
 const App = () => {
   const [filteredBeers, setFilteredBeers] = useState(beersData);
 
-  const handleFilter = (filteredData:BeerTypes[]) => {
+  const handleFilterByName = (filteredData:BeerTypes[]) => {
+    setFilteredBeers(filteredData);
+  };
+
+  const handleFilterByKey = (filteredData : BeerTypes[]) =>{
     setFilteredBeers(filteredData);
   };
 
@@ -25,7 +29,7 @@ const App = () => {
       </section>
       <section className="main">
         <section className="main__navigation">
-          <Nav handleFilter={handleFilter} allBeers={beersData}/>
+          <Nav handleFilterByName={handleFilterByName} handleFilterByKey={handleFilterByKey} allBeers={beersData}/>
         </section>
         <section className="beerGallery">
           <BeerGallery beers={filteredBeers} heading="" />
