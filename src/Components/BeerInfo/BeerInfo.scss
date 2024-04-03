@@ -1,0 +1,110 @@
+// .album-info {
+//     .beer-info__banner {
+//       overflow: hidden;
+//       background-color: $color-black;
+//       height: 10vh;
+//       position: relative;
+//     }
+  
+//     .beer-info__image {
+//       border-radius: 1rem;
+//       width: calc(100% - 6.25rem);
+//       display: block;
+//       position: absolute;
+//       right: 50%;
+//       transform: translateX(-50%);
+
+//     }
+  
+//     .album-info__content {
+//       padding: 0.625rem 3.125rem;
+//     }
+  
+//     .album-info__facts {
+//       list-style-type: none;
+//       padding: 0;
+//     }
+  
+//     .album-info__heading {
+//       font-size: 1.875rem;
+//       width: fit-content;
+  
+//       &:after {
+//         content: "";
+//         display: block;
+//         height: 0.313rem;
+//         width: 100%;
+//         background-color: $color-primary;
+//         border-radius: 1rem;
+//       }
+//     }
+//   }
+  
+ // @media screen and (min-width: $desktop-breakpoint) {
+    .beer-info {
+      display: grid;
+      grid-template-columns: 1fr 3fr ;
+      border-radius: 1rem;
+      overflow: hidden;
+      margin: 1.5rem 2rem;
+      box-shadow: 0 0.625rem 1.25rem rgba(black, 0.25);
+      min-height: 60vh;
+      padding-left: 1.2rem;
+  
+      .beers-info__banner {
+        height: 100%;
+        background-color: unset;
+      }
+  
+      .beer-info__image {
+        width: unset;
+        height: 47%;
+        right: unset;
+        transform: unset;
+        top: 0;
+        opacity: 0.8;
+      }
+  
+      .beer-info__heading {
+        margin: 0 auto;
+        font-size: 2rem;
+      }
+
+      .beer-info__content {
+        padding: 1rem;
+        text-align: justify; // Added padding for content area
+      }
+    
+      .beer-info__ingredients {
+        display: flex; // Make the ingredients section a flex container
+        justify-content: space-between; // Align items at each end
+        margin-bottom: 1rem; // Add margin to separate from other content
+      }
+    
+      .beer-info__ingredients div {
+        width: 48%; // Adjusted width for each ingredients section
+      }
+    
+      .beer-info__ingredients h3 {
+        font-size: 1.5rem; // Adjusted font size for ingredients headings
+        margin-bottom: 0.5rem; // Added margin to separate from list
+      }
+    
+      .beer-info__ingredients ul {
+        padding-left: 0; // Remove default padding for lists
+      }
+
+      .beer-info__food-pairing-header{
+        font-size: 1.5rem; // Adjusted font size for ingredients headings
+        margin-bottom: 0.5rem; // Added margin to separate from list
+      }
+    
+    //   .beer-info__ingredients ul li {
+    //     list-style: none; // Remove default list styles
+    //   }
+    }
+
+      
+    
+ // }
+  

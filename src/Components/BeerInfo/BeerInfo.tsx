@@ -1,5 +1,5 @@
 import {BeerTypes} from "../../Types/beerTypes"
-//import "./AlbumInfo.scss";
+import "./BeerInfo.scss";
 import {Link, useParams} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquare } from '@fortawesome/free-solid-svg-icons';
@@ -24,40 +24,36 @@ const BeerInfo = ({ beers }: BeerInfoProps) => {
       </div>
       <div className="beer-info__content">
         <h2 className="beer-info__heading">{beer.name}</h2>
-        <p>{beer.description ?? `No description available`}</p>
-        <h2 className="beer-info__heading">Facts</h2>
-        <p>First Brewed: {beer.first_brewed}</p>
-        <ul className="beer-info__facts">
-          <li>
-            Malt Ingredients:
-            <ul>
-              {beer.ingredients?.malt?.map((malt: any, index: number) => (
-                <li key={index}>{malt.name}</li>
-              ))}
-            </ul>
-          </li>
-          <li>
-            Hops:
-            <ul>
-              {beer.ingredients?.hops?.map((hop: any, index: number) => (
-                <li key={index}>{hop.name} - {hop.attribute}</li>
-              ))}
-            </ul>
-          </li>
-          <li>
-            Food Pairing:
-            <ul>
-              {beer.food_pairing?.map((pairing: string, index: number) => (
-                <li key={index}>{pairing}</li>
-              ))}
-            </ul>
-          </li>
-        </ul>
-        <Link to="/beerGallery" className="close-link">
-        <FontAwesomeIcon icon={faSquare}/>
-        </Link>
-
+        <p className = "beer-info__description">{beer.description ?? `No description available`}</p>
+        <p className = "beer-info__first-brewed">First Brewed: {beer.first_brewed}</p>
+        <div className="beer-info__ingredients">
+        <div>
+          <h3>Malts:</h3>
+          <ul>
+            {beer.ingredients?.malt?.map((malt: any, index: number) => (
+              <li key={index}>{malt.name}</li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3>Hops:</h3>
+          <ul>
+            {beer.ingredients?.hops?.map((hop: any, index: number) => (
+              <li key={index}>{hop.name} - {hop.attribute}</li>
+            ))}
+          </ul>
+        </div>
       </div>
+      <div>
+        <h3 className = "beer-info__food-pairing-header">Food Pairing:</h3>
+        <p>
+          {beer.food_pairing?.join(", ")}
+        </p>
+      </div>
+      <Link to="/beerGallery" className="close-link">
+        <FontAwesomeIcon icon={faSquare}/>
+      </Link>
+    </div>
     </article>
   );
 };
