@@ -26,10 +26,18 @@
       width: 3rem;
       padding-right: 3rem;
       background-color: #333333;
-      
+      cursor:pointer;
+      transition:transform 0.2s;
     }
+
+      .header__cricket:hover {
+        transform:scale(1.1);
+      }
   
   }
+
+
+
 
   
   // .Navigation {/* Example background color for the navigation section */
