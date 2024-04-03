@@ -5,20 +5,14 @@
 
 // }
 
-.app {
-    display: flex;
-    flex-direction: column;
-  }
-  
   .header {
     position: sticky;
     background-color: #333333; 
     top: 0;
-    width: 100%; 
     height: 4.2rem;
     display: flex;
     align-items: center;
-    position: sticky;
+  
 
     .header__name {
       margin: 0; 
@@ -37,16 +31,6 @@
   
   }
 
-
-  .main {
-    display: flex;
-    flex-direction: row;
-    padding: 1rem;
-  
-    .main__navigation {
-      margin-top: 1rem;
-    }
-  }
   
   // .Navigation {/* Example background color for the navigation section */
   //   padding: 1rem;

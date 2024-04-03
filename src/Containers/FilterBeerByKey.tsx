@@ -35,9 +35,9 @@ const FilteredBeers = ({handleFilterBeersByKey ,allBeers}: FilteredBeersProps) =
           return year < 2010;
         });
       } else if (filter === "High Alcohol Beers") {
-        filteredData = filteredData.filter(beer => beer.abv ?? 0 > 6);
+        filteredData = filteredData.filter(beer => (beer.abv ?? 0) > 6);
       } else if (filter === "High Acidity Beers") {
-        filteredData = filteredData.filter(beer => beer.ph ?? 0 < 4);
+        filteredData = filteredData.filter(beer => (beer.ph ?? 0) < 4);
       }
     });
 

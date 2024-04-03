@@ -1,1 +1,8 @@
-/*# sourceMappingURL=Home.css.map */
+.main {
+  display: flex;
+  flex: 1;
+}
+.main .main__navigation {
+  margin-top: 1rem;
+  flex: 0 0 250px;
+}/*# sourceMappingURL=Home.css.map */
