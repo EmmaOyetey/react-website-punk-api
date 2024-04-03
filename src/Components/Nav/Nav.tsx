@@ -3,6 +3,7 @@ import FindABeerByName from "../../Containers/FindABeerByName";
 import FilteredBeers from "../../Containers/FilterBeerByKey";
 import beers from "../../Data/beers";
 import { BeerTypes } from "../../Types/beerTypes";
+
 //import { useState } from "react";
 
 type NavProps = {
