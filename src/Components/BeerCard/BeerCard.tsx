@@ -4,19 +4,19 @@ import "./BeerCard.scss"
 type BeerCardProps = {
   name: string,
   imageUrl: string,
-  description: string,
+  tagline: string,
   styleVariant: string,
 };
 
 
-const BeerCard = ({name, imageUrl, description, styleVariant} : BeerCardProps) => {
+const BeerCard = ({name, imageUrl, tagline, styleVariant} : BeerCardProps) => {
 
     const truncateDescription = () => {
-        const words = description.split(' ');
+        const words = tagline.split(' ');
         if (words.length > 12 ) {
           return words.slice(0, 12).join(' ') + '...';
         }
-        return description;
+        return tagline;
     }
 
 const className = `beer-card beer-card--${styleVariant}`;

@@ -31,13 +31,13 @@ const FilteredBeers = ({handleFilterBeersByKey ,allBeers}: FilteredBeersProps) =
     selectedFilters.forEach(filter => {
       if (filter === "Classic Beers") {
         filteredData = filteredData.filter(beer => {
-          const year = parseInt(beer.first_brewed.split("/")[1]);
+          const year = parseInt(beer.first_brewed.split("/")?.[1]??"0");
           return year < 2010;
         });
       } else if (filter === "High Alcohol Beers") {
-        filteredData = filteredData.filter(beer => beer.abv > 6);
+        filteredData = filteredData.filter(beer => beer.abv ?? 0 > 6);
       } else if (filter === "High Acidity Beers") {
-        filteredData = filteredData.filter(beer => beer.ph < 4);
+        filteredData = filteredData.filter(beer => beer.ph ?? 0 < 4);
       }
     });
 
@@ -47,7 +47,7 @@ const FilteredBeers = ({handleFilterBeersByKey ,allBeers}: FilteredBeersProps) =
     return (
       <>
         <Filter
-          label="Find a Beer"
+          label="Filter..."
           items={["Classic Beers", "High Alcohol Beers", "High Acidity Beers"]}
           selectedItems={selectedFilters}
           handleInputChange={handleInputChange}
