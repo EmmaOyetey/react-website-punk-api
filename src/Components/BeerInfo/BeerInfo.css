@@ -1,0 +1,80 @@
+.beer-info {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 1.5rem 2rem;
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.25);
+  min-height: 60vh;
+  padding-left: 1.2rem;
+}
+.beer-info .beers-info__banner {
+  height: 100%;
+  background-color: unset;
+}
+.beer-info .beer-info__image {
+  height: 47%;
+  opacity: 0.8;
+  padding-left: 1rem;
+  padding-top: 2rem;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+.beer-info .beer-info__name {
+  margin: 0 auto;
+  font-size: 2rem;
+}
+.beer-info .beer-info__tagline {
+  font-size: 1.4rem;
+}
+.beer-info .close-link {
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.beer-info .close-link:hover {
+  transform: scale(1.1);
+}
+.beer-info .close-link .fa-times {
+  margin-left: 1rem; /* Adjusts the position to the right */
+}
+.beer-info .beer-info__content {
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+.beer-info .beer-info__header {
+  display: flex;
+}
+.beer-info .beer-info__name {
+  text-align: left;
+  margin-left: 0;
+}
+.beer-info .beer-info__description {
+  margin-top: 0.3rem;
+  text-align: justify;
+}
+.beer-info .beer-info__first-brewed {
+  margin: 0;
+}
+.beer-info .beer-info__ingredients {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.beer-info .beer-info__ingredients div {
+  width: 48%;
+}
+.beer-info .beer-info__ingredients h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1.2rem;
+}
+.beer-info .beer-info__ingredients ul {
+  padding-left: 0;
+  margin-left: 1rem;
+}
+.beer-info .beer-info__food-pairing-header {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}/*# sourceMappingURL=BeerInfo.css.map */

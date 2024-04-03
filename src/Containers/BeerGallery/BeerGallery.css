@@ -14,4 +14,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+}
+
+.beer-gallery__content a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.beer-gallery__content a:hover {
+  transform: scale(1.05);
 }/*# sourceMappingURL=BeerGallery.css.map */
