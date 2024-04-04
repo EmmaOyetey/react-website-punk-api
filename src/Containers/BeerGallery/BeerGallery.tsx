@@ -11,6 +11,10 @@ type BeerGalleryProps = {
 const BeerGallery = ({ beers, heading }: BeerGalleryProps) => {
   const filteredBeers = beers.filter((beer) => beer.image_url);
 
+  // useEffect(() => {
+  //   window.scrollTo(0,0);
+  // }, [beers]);
+
   return (
     <div className="beer-gallery">
       <h2 className="beer-gallery__heading">{heading}</h2>
