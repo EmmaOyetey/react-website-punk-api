@@ -4,12 +4,16 @@ import Nav from "./Nav";
 import beersData from "../../Data/beers"; 
 
 describe("searchBox in Nav component", () => {
+
+    const mockHandleFilterBeerByKey = () => {};
+    const mockHandleFilterByName = () => {};
+
   // Tests for rendering FindABeerByName component
-  it("should render FindABeerByName search component; show a searchbox which allows a user to input and see what is written", () => {
+  it("should render FindABeerByName search component; show a searchbox which allows a user to input and see what is written", async () => {
     render(
       <Nav
-        handleFilterByName={HandleFilterByName}
-        handleFilterByKey={HandleFilterByKey}
+        handleFilterByName={mockHandleFilterByName}
+        handleFilterByKey={mockHandleFilterBeerByKey}
         allBeers={beersData}
       />
     );
@@ -23,19 +27,24 @@ describe("searchBox in Nav component", () => {
     expect(searchBox).toBeInTheDocument();
 
     //check the user sees the typed letter 'a' in the searchbox
-    userEvent.type(searchBox, "a");
-    expect(searchBox).toHaveValue("a");
+    await userEvent.type(searchBox, "a");
+    expect(searchBox).toHaveDisplayValue("a");
+   // expect(searchBox.value).toBe("a");
 
   });
 });
 
 describe("Filters in Nav component", () => {
+
+    const mockHandleFilterBeerByKey = () => {};
+    const mockHandleFilterByName = () => {};
+
     // Tests for rendering FindABeerByName component
-    it("should render FilterBeerByKey Filter component; with 3 options which can be selected for filtering ", () => {
+    it("should render FilterBeerByKey Filter component; with 3 options which can be selected for filtering ", async () => {
       render(
         <Nav
-          handleFilterByName={HandleFilterByName}
-          handleFilterByKey={HandleFilterByKey}
+          handleFilterByName={mockHandleFilterByName}
+          handleFilterByKey={mockHandleFilterBeerByKey}
           allBeers={beersData}
         />
       );
@@ -55,9 +64,9 @@ describe("Filters in Nav component", () => {
     expect(highAcidityCheckbox).toBeInTheDocument();
 
     // Select each checkbox
-    userEvent.click(classicCheckbox);
-    userEvent.click(highAlcoholCheckbox);
-    userEvent.click(highAcidityCheckbox);
+    await userEvent.click(classicCheckbox);
+    await userEvent.click(highAlcoholCheckbox);
+    await userEvent.click(highAcidityCheckbox);
 
     // Check if checkboxes are checked after being clicked
     expect(classicCheckbox).toBeChecked();
@@ -65,9 +74,9 @@ describe("Filters in Nav component", () => {
     expect(highAcidityCheckbox).toBeChecked();
 
     // Unselect checkboxes
-    userEvent.click(classicCheckbox);
-    userEvent.click(highAlcoholCheckbox);
-    userEvent.click(highAcidityCheckbox);
+    await userEvent.click(classicCheckbox);
+    await userEvent.click(highAlcoholCheckbox);
+    await userEvent.click(highAcidityCheckbox);
 
     // Check if checkboxes are unchecked after being clicked again
     expect(classicCheckbox).not.toBeChecked();
@@ -75,8 +84,8 @@ describe("Filters in Nav component", () => {
     expect(highAcidityCheckbox).not.toBeChecked();
 
     // Select multiple checkboxes
-    userEvent.click(classicCheckbox);
-    userEvent.click(highAlcoholCheckbox);
+    await userEvent.click(classicCheckbox);
+    await userEvent.click(highAlcoholCheckbox);
 
     // Check if multiple checkboxes are checked
     expect(classicCheckbox).toBeChecked();
