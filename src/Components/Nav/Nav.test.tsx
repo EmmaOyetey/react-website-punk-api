@@ -29,7 +29,14 @@ describe("searchBox in Nav component", () => {
     //check the user sees the typed letter 'a' in the searchbox
     await userEvent.type(searchBox, "a");
     expect(searchBox).toHaveDisplayValue("a");
-   // expect(searchBox.value).toBe("a");
+  
+    // Check if the filter function is called with the correct filtered data
+    // await userEvent.type(searchBox, "blonde"); 
+    // expect(mockHandleFilterByName).toHaveBeenCalledWith(
+    //   expect.arrayContaining(
+    //     beersData.filter((beer) => beer.name.toLowerCase().includes("blonde"))
+    //   )
+    // )
 
   });
 });
