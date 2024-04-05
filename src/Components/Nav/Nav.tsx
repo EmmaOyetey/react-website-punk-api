@@ -4,7 +4,6 @@ import FilteredBeers from "../../Containers/FilterBeerByKey/FilterBeerByKey";
 import beers from "../../Data/beers";
 import { BeerTypes } from "../../Types/beerTypes";
 
-//import { useState } from "react";
 
 type NavProps = {
   handleFilterByName: (filteredData: BeerTypes[]) => void;
@@ -32,56 +31,3 @@ const Nav = ({ handleFilterByName, handleFilterByKey, allBeers }: NavProps) => {
 
 export default Nav;
 
-// import { FormEventHandler, useState } from "react";
-// import menu from "../../assets/images/menu-icon.png";
-// import settings from "../../assets/images/settings-icon.png";
-// import NavMenu from "../NavMenu/NavMenu";
-// import SettingsMenu from "../SettingsMenu/SettingsMenu";
-// import "./Nav.scss";
-
-// type NavProps = {
-//   userName: string;
-//   updateUserName: FormEventHandler<HTMLFormElement>;
-// };
-
-// const Nav = ({ userName, updateUserName }: NavProps) => {
-//   const [showSettings, setShowSettings] = useState<boolean>(false);
-//   const [showNav, setShowNav] = useState(false);
-
-//   const toggleSettings = () => {
-//     setShowSettings(!showSettings);
-//   };
-
-//   const toggleNav = () => {
-//     setShowNav(!showNav);
-//   };
-
-//   return (
-//     <nav className="nav">
-//       {showSettings && (
-//         <SettingsMenu
-//           userName={userName}
-//           onClose={toggleSettings}
-//           onSubmit={updateUserName}
-//         />
-//       )}
-//       {showNav && <NavMenu onClose={toggleNav} />}
-
-//       <img
-//         src={menu}
-//         className="nav__item"
-//         alt="menu icon"
-//         onClick={toggleNav}
-//       />
-//       <h1>Ear Worm</h1>
-//       <img
-//         src={settings}
-//         className="nav__item"
-//         alt="settings icon"
-//         onClick={toggleSettings}
-//       />
-//     </nav>
-//   );
-// };
-
-// export default Nav

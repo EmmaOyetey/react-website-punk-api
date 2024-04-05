@@ -3,6 +3,7 @@ import "./BeerInfo.scss";
 import {Link, useParams} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { useEffect } from "react";
 
 type BeerInfoProps = {
   beers: BeerTypes[];
@@ -13,9 +14,9 @@ const BeerInfo = ({ beers }: BeerInfoProps) => {
   const {beerId} = useParams();
   console.log (beerId);
 
-  // useEffect(() => {
-  //   window.scrollTo(0,0);
-  // }, [beerId]);
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, [beerId]);
 
   const beer = beers.find(beer => beer.id === Number(beerId));
   if (!beer) return <p>Couldn't find a beer with that id</p>;
