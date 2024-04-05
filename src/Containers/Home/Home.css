@@ -6,16 +6,16 @@
   margin-top: 1rem;
   flex: 0 0 250px;
 }
-.main .main__beer-gallery--nobeers {
+.main .main__beer-gallery-nobeers {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
   text-align: justify;
-  margin-left: 10rem;
+  margin-left: 15rem;
   margin-top: 6rem;
 }
-.main .main__beer-gallery--nobeers p {
+.main .main__beer-gallery-nobeers p {
   margin: 0;
 }/*# sourceMappingURL=Home.css.map */

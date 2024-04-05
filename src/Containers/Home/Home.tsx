@@ -21,8 +21,15 @@ const Home = ({filteredBeers, handleFilterByKey, handleFilterByName}: HomeProps)
           allBeers={beersData}
         />
       </section>
-      <section className="Main__beer-gallery">
-        <BeerGallery beers={filteredBeers} heading="" />
+      <section className="main__beer-gallery">
+        {filteredBeers.length ? (
+          <BeerGallery beers={filteredBeers} heading="" />
+        ) : (
+      <section className = "main__beer-gallery-nobeers">
+          <p>No beers match your search. Please try again...</p>
+          <p>Update your search choices or click on the cricket to start again!</p>
+      </section>    
+        )}
       </section>
     </section>
   );
