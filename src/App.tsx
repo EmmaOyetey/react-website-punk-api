@@ -19,15 +19,19 @@ const App = () => {
     setFilteredBeers(filteredData);
   };
 
+  const resetState = () => {
+    setFilteredBeers(beersData); // Reset filtered beers to original data
+  };
+
   return (
-    <BrowserRouter basename= "react-website-punk-api">
+    <BrowserRouter basename="react-website-punk-api">
       <div className="app">
         <section className="header">
           <h1 className="header__name">
             Beer Cricket :
             <span style={{ fontSize: "2rem" }}> All about the hops</span>
           </h1>
-          <Link to="/" className="refresh to all beers">
+          <Link to="/" className="refresh to all beers" onClick={resetState}>
             <img
               className="header__cricket"
               src={cricketTest}
