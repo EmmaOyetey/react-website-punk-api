@@ -41827,9 +41827,9 @@ const beers: BeerTypes[] = [
   {
     "id": 2,
     "name": "Trashy Blonde",
-    "tagline": "You Know You Shouldn't",
-    "first_brewed": "04/2008",
-    "description": "A titillating, neurotic, peroxide punk of a Pale Ale. Combining attitude, style, substance, and a little bit of low self esteem for good measure; what would your mother say? The seductive lure of the sassy passion fruit hop proves too much to resist. All that is even before we get onto the fact that there are no additives, preservatives, pasteurization or strings attached. All wrapped up with the customary BrewDog bite and imaginative twist.",
+    "tagline": "what the.....",
+    "first_brewed": "in the dark ages... ",
+    "description": "titillating.... neurotic....   little bit of low self esteem...... no strings attached.................what the....... dark ages ......",
     "image_url": "https://images.punkapi.com/v2/2.png",
     "abv": 4.1,
     "ibu": 41.5,
