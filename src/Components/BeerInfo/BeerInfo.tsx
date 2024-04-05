@@ -18,6 +18,21 @@ const BeerInfo = ({ beers }: BeerInfoProps) => {
     window.scrollTo(0,0);
   }, [beerId]);
 
+  const groupHopsByAttribute = (hops: any[]) => {
+    const groups: any = {};
+    hops.forEach((hop) => {
+      if (!groups[hop.attribute]) {
+        groups[hop.attribute] = [];
+      }
+      groups[hop.attribute].push(hop.name);
+    });
+  
+    return Object.keys(groups).map((attribute) => ({
+      attribute,
+      names: groups[attribute],
+    }));
+  };
+
   const beer = beers.find(beer => beer.id === Number(beerId));
   if (!beer) return <p>Couldn't find a beer with that id</p>;
 
@@ -39,7 +54,8 @@ const BeerInfo = ({ beers }: BeerInfoProps) => {
             </Link>
         </div>
         <p className = "beer-info__description">{beer.description ?? `No description available`}</p>
-        <p className = "beer-info__first-brewed">First Brewed: {beer.first_brewed}</p>
+        <p className = "beer-info__first-brewed">First Brewed: {beer.first_brewed} </p>
+        <p className = "beer-info__abv">ABV: {beer.abv}</p>
         <div className="beer-info__ingredients">
         <div>
           <h3>Malts:</h3>
@@ -50,13 +66,15 @@ const BeerInfo = ({ beers }: BeerInfoProps) => {
           </ul>
         </div>
         <div>
-          <h3>Hops:</h3>
-          <ul>
-            {beer.ingredients?.hops?.map((hop: any, index: number) => (
-              <li key={index}>{hop.name} - {hop.attribute}</li>
-            ))}
-          </ul>
-        </div>
+  <h3>Hops:</h3>
+  <ul>
+    {groupHopsByAttribute(beer.ingredients?.hops || []).map((group: any, index: number) => (
+      <li key={index}>
+        {group.attribute}: {group.names.join(', ')}
+      </li>
+    ))}
+  </ul>
+</div>
       </div>
       <div>
         <h3 className = "beer-info__food-pairing-header">Food Pairing:</h3>
