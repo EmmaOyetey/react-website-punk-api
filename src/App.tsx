@@ -20,7 +20,7 @@ const App = () => {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename= "react-website-punk-api">
       <div className="app">
         <section className="header">
           <h1 className="header__name">
