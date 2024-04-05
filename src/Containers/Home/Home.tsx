@@ -12,23 +12,22 @@ type HomeProps = {
 
 const Home = ({filteredBeers, handleFilterByKey, handleFilterByName}: HomeProps) => {
 
-    return( 
-        <section className="main">
-            <section className="main__navigation">
-            <Nav
-                handleFilterByName={handleFilterByName}
-                handleFilterByKey={handleFilterByKey}
-                allBeers={beersData}
-            </section>
-            <section className = "Main__beer-gallery">
-            <BeerGallery beers = {filteredBeers} heading = ""/> 
-            </section>
-        </section >
+  return (
+    <section className="main">
+      <section className="main__navigation">
+        <Nav
+          handleFilterByName={handleFilterByName}
+          handleFilterByKey={handleFilterByKey}
+          allBeers={beersData}
+        />
+      </section>
+      <section className="Main__beer-gallery">
+        <BeerGallery beers={filteredBeers} heading="" />
+      </section>
+    </section>
+  );
+};
 
-    )
-
-
-}
 
 
 

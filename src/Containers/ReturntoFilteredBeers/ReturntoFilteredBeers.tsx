@@ -1,13 +1,10 @@
 import "./ReturntoFilteredBeers.scss";
-//import beers from "../../Data/beers";
 import BeerGallery from "../BeerGallery/BeerGallery";
 import { BeerTypes } from "../../Types/beerTypes";
 import { Link } from "react-router-dom";
 import cricketTest from "../../Assets/cricketTest.png";
-//import Nav from "../../Components/Nav/Nav";
-//import {filteredBeers} from "App.tsx" ;
 
-//import { useState } from 'react';
+
 type ReturntoBeersProps = {
   filteredBeers: BeerTypes[];
 };

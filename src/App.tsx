@@ -1,8 +1,5 @@
-//import { useState } from 'react'
-
 import "./App.scss";
 import beersData from "./Data/beers";
-//import BeerGallery from "./Containers/BeerGallery/BeerGallery";
 import cricketTest from "./Assets/cricketTest.png";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import BeerInfo from "./Components/BeerInfo/BeerInfo";
