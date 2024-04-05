@@ -1,5 +1,6 @@
 {
-  "name": "react-website-punk-api",
+  "homepage": "EmmaOyetey.github.react-website-punk-api",
+  "author": "EmmaOyetey",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +9,8 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
