@@ -1,30 +1,29 @@
-# React + TypeScript + Vite
+Author Emma Oyetey
+Name: Beer Cricket
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This website was built based on the following specifications;
+•	Built entirely in React;
+•	Uses the Punk API (https://punkapi.com/)
+•	Contains initial testing on rendering and display. 
 
-Currently, two official plugins are available:
+It provides the user the ability to
+  •	Search different beers by their name; page content updates as each letter is typed in the searchbox. 
+  •	Filter on three conditions:
+      o	High Alcohol (ABV value greater than 6%)
+      o	Classic Range (Was first brewed before 2010)
+      o	High Acidity(pH lower than 4)
+  •	Apply multiple filters simultaneously. 
+  •	Return to filtered query results after exploring more information on a selected beer within that search result.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The website has the following components;
+  •	Beer Cards; Containing topline information on a beer including an image, its name and tagline
+  •	Beer Information; Showing more detailed information on a selected beer; including Malt, Hops and food suggestions.
+  •	Filter; Basic layout minus the filtering logic
+  •	SearchBox; Basic layout minus the search logic
+  •	Navigation bar; A sticky Nav bar containing the filter and searchbox components
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+In addition to the home page it has the following containers;
+  •	FilterBeerByKey : containing code relating to filters as above
+  •	FindABeerByName : containing code relating to searching for a beer by its name
+  •	Beer Gallery : where beer cards are displayed
+  •	ReturntoFilteredBeers : enabling the current search items to be retained whilst exploring each for more info. 
